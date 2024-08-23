@@ -34,7 +34,7 @@ html, body {
 }
 
 #typewriter {
-    font-size: 7vh;
+    font-size: 5vh;
     overflow: hidden;
     display: inline;
     font-family: "Space Mono";
