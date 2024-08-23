@@ -118,12 +118,11 @@ html, body {
 .menu {
     z-index: 5;
     position: absolute;
-    transform: translateX(-100%);
+    display: none;
     flex-direction: column;
     background-color: var(--secondary-color);
     height: 100vh;
     width: 100vw;
-    display: flex;
 }
 
 .menu .menuHeader {
@@ -164,11 +163,8 @@ html, body {
 }
 
 .menu.menuOpened {
+    display: flex !important;
     animation: slideIn 0.5s;
-}
-
-.menu.menuClosed {
-    animation: slideOut 0.5s;
 }
 
 @keyframes slideIn {
@@ -177,14 +173,5 @@ html, body {
     }
     to {
         transform: translateX(0%);
-    }
-}
-
-@keyframes slideOut {
-    from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-100%);
     }
 }
