@@ -5,6 +5,11 @@
     --highlight-second: #8B1E3F;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
 
 .logo {
     width: 20vh;
@@ -19,7 +24,7 @@
     align-items: center;
 }
 
-.menuIcon {
+#menuOpen {
     display: inline;
     color: var(--secondary-color);
     margin-right: 4vh;
@@ -59,11 +64,127 @@
     margin: 3vh;
 }
 
-button {
+.toMap {
     display: block;
     margin-top: 2vh;
     margin-left: auto;
     margin-right: auto;
+    font-family: "Space Mono";
+    font-size: 2.4vh;
+    font-weight: 600;
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    padding-left: 2vh; padding-right: 2vh;
+    padding-top: 1vh; padding-bottom: 1vh;
+    transition-duration: 0.5s;
+}
+
+.toMap:hover {
+    background: linear-gradient(90deg, var(--highlight-first), var(--highlight-second));
+    color: white;
 }
 
 
+.content.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3vh;
+    margin-left: 0;
+    margin-right: 0;
+    background: linear-gradient(90deg, var(--highlight-first), var(--highlight-second));
+}
+
+.stat {
+    color: white;
+    margin: 1vh;
+    text-align: center;
+}
+
+.stat h2 {
+    font-size: 5vh;
+    font-weight: 800;
+    font-family: "Space Mono";
+}
+
+.stat p {
+    font-size: 2.4vh;
+    font-weight: 400;
+    font-family: "Poppins";
+}
+
+.menu {
+    z-index: 5;
+    position: absolute;
+    transform: translateX(-100%);
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.menu .menuHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4vh; padding-right: 4vh;
+    padding-bottom: 2vh; padding-top: 0;
+    color: var(--main-color);
+}
+
+.menu .menuHeader h1 {
+    font-size: 6vh;
+    font-weight: 600;
+    font-family: "Space Mono";
+}
+
+.menu .menuContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4vh; padding-right: 4vh;
+}
+
+.menu .menuContent .menuItem {
+    color: var(--main-color);
+    font-size: 3vh;
+    font-family: "Poppins";
+    text-decoration: none;
+    transition-duration: 0.5s;
+    margin-bottom: 1vh;
+}
+
+.menu .menuContent .menuItem:hover {
+    color: var(--highlight-second);
+    margin-left: 4vh;
+}
+
+.menu.menuOpened {
+    animation: slideIn 0.5s;
+}
+
+.menu.menuClosed {
+    animation: slideOut 0.5s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

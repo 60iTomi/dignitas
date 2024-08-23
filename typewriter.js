@@ -1,4 +1,4 @@
-const texts = ["Nyilvános mosdók, egyszerűen.", "A higiénia alapvető emberi jog.", "Méltósággal, közösen."];
+const texts = ["Nyilvános mosdók, egyszerűen.", "A személyes tisztaság emberi jog.", "Méltósággal, közösen."];
 let currentTextIndex = 0;
 let charIndex = 0;
 const typeSpeed = 100;
