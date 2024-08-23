@@ -1,0 +1,69 @@
+:root{
+    --main-color: white;
+    --secondary-color: #131313;
+    --highlight-first: #000FE7;
+    --highlight-second: #8B1E3F;
+}
+
+
+.logo {
+    width: 20vh;
+    height: auto;
+    display: inline
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuIcon {
+    display: inline;
+    color: var(--secondary-color);
+    margin-right: 4vh;
+    font-size: 6vh;
+}
+
+#typewriter {
+    font-size: 7vh;
+    overflow: hidden;
+    display: inline;
+    font-family: "Space Mono";
+    color: var(--secondary-color);
+}
+
+.typewriterContainer {
+    display: block;
+    min-height: 32vh;
+}
+
+#typewriter::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    color: var(--highlight-first);
+    font-weight: 800;
+}
+
+.nocursor::after {
+    content: '';
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.content {
+    margin: 3vh;
+}
+
+button {
+    display: block;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
