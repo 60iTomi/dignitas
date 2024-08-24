@@ -195,7 +195,7 @@ html, body {
 }
 
 .content.info p {
-    font-size: 2.5vh;
+    font-size: 2.2vh;
     font-weight: 400;
     font-family: 'Open Sans';
     color: var(--secondary-color);
