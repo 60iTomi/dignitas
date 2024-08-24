@@ -128,6 +128,12 @@ html, body {
     display: flex;
 }
 
+.menu #menuExit {
+    font-size: 5vh;
+    margin-top: 0;
+    margin-right: 2.5vh;
+}
+
 .menu .menuHeader {
     display: flex;
     flex-direction: row;
@@ -196,11 +202,19 @@ html, body {
     text-align: justify;
 }
 
-.footer p {
+.footer {
     font-size: 2.4vh;
     font-weight: 600;
     font-family: "Space Mono";
-    color: var(--secondary-color);
+    color: var(--main-color);
     margin-top: 2vh;
     margin-left: 3vh; margin-right: 3vh;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 2vh;
+    display: flex;
+    flex-direction: row;
 }
