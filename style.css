@@ -43,7 +43,7 @@ html, body {
 
 .typewriterContainer {
     display: block;
-    min-height: 32vh;
+    min-height: 28vh;
 }
 
 #typewriter::after {
@@ -120,11 +120,12 @@ html, body {
 .menu {
     z-index: 5;
     position: absolute;
-    display: none;
     flex-direction: column;
     background-color: var(--secondary-color);
     height: 100vh;
     width: 100vw;
+    transition-duration: 0.5s;
+    display: flex;
 }
 
 .menu .menuHeader {
@@ -165,15 +166,12 @@ html, body {
 }
 
 .menu.menuOpened {
-    display: flex !important;
-    animation: slideIn 0.5s;
+    transition-duration: 0.5s;
+    transform: translateX(0);
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0%);
-    }
+.menu.menuClosed {
+    transition-duration: 0.5s;
+    transform: translateX(-100%);
 }
+
