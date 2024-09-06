@@ -3,6 +3,8 @@
     --secondary-color: #131313;
     --highlight-first: #000FE7;
     --highlight-second: #8B1E3F;
+    --pastel-highlight: #8783d1;
+    --darker-pastel-highlight: #6e6ab3;
 }
 
 html, body {

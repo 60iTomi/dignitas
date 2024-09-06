@@ -1,3 +1,13 @@
 #map {
-    height: 180px;
+    height: 74vh;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.content.mapholder {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
 }
