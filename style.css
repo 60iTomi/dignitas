@@ -120,7 +120,7 @@ html, body {
 }
 
 .menu {
-    z-index: 5;
+    z-index: 60;
     position: absolute;
     flex-direction: column;
     background-color: var(--secondary-color);
@@ -211,9 +211,6 @@ html, body {
     color: var(--main-color);
     margin-top: 2vh;
     margin-left: 3vh; margin-right: 3vh;
-}
-
-.footer {
     background-color: var(--secondary-color);
     margin: 0;
     padding: 2vh;
