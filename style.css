@@ -33,6 +33,7 @@ html, body {
     color: var(--secondary-color);
     margin-right: 4vh;
     font-size: 6vh;
+    pointer-events: auto !important;
 }
 
 #typewriter {
@@ -120,7 +121,7 @@ html, body {
 }
 
 .menu {
-    z-index: 60;
+    z-index: 3000;
     position: absolute;
     flex-direction: column;
     background-color: var(--secondary-color);
@@ -128,6 +129,7 @@ html, body {
     width: 100vw;
     transition-duration: 0.5s;
     display: flex;
+    padding-top: 5vh;
 }
 
 .menu #menuExit {
@@ -141,8 +143,9 @@ html, body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 6vh;
     padding-left: 4vh; padding-right: 4vh;
-    padding-bottom: 2vh; padding-top: 0;
+    padding-bottom: 2vh; margin-top: none;
     color: var(--main-color);
 }
 
