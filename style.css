@@ -5,6 +5,7 @@
     --highlight-second: #8B1E3F;
     --pastel-highlight: #8783d1;
     --darker-pastel-highlight: #6e6ab3;
+    overflow-y: auto;
 }
 
 html, body {
