@@ -1,3 +1,7 @@
+:root {
+    overflow-y: hidden;
+}
+
 
 #map {
     height: 100%;
@@ -35,7 +39,12 @@
     border-bottom-left-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
 }
-    
+
+.leaflet-control-zoom-out, .leaflet-control-zoom-in {
+    background-color: var(--secondary-color) !important;
+    color: var(--main-color) !important;
+    }
+
 .leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out  {
         font-size: 27px;
         }
@@ -52,13 +61,15 @@
     font-size: 21px;
     font-weight: bold;
     z-index: 2000 !important; 
+    color: var(--main-color);
 }
 
 .menuButton {
     margin: 10px !important;
     width: 30px;
     height: 30px;
-    background-color: white;
+    background: linear-gradient(90deg, var(--highlight-first), var(--highlight-second));
+    transition-duration: 0.5s;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -66,6 +77,11 @@
     box-shadow: 0 1px 5px rgba(0,0,0,0.65);
 	border-radius: 8px;
     z-index: 1999 !important;
+    transition-duration: 0.5s;
+}
+
+.menuButton:hover {
+    filter:saturate(150%);
 }
 
 .leaflet-control-attribution.leaflet-control p {
@@ -74,9 +90,22 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    filter: brightness(2)
 
 }
 
 .leaflet-control-attribution.leaflet-control p:before {
     content: " | ";
+}
+
+.leaflet-control-attribution.leaflet-control {
+    background-color: var(--secondary-color);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+    z-index: 2000 !important;
+    height: 17px;
+    border-top-left-radius: 5px;
+}
+
+.leaflet-control-attribution.leaflet-control * {
+    color: var(--main-color);
 }
