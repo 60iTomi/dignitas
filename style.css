@@ -1,10 +1,9 @@
 :root{
     --main-color: white;
     --secondary-color: #131313;
+    --tertiary-color: #3b3b3b;
     --highlight-first: #000FE7;
     --highlight-second: #8B1E3F;
-    --pastel-highlight: #8783d1;
-    --darker-pastel-highlight: #6e6ab3;
     overflow-y: auto;
 }
 
