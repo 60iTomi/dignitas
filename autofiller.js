@@ -1,12 +1,20 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get('id');
-    const method = urlParams.get('method');
+let id = '';
+let hash = '';
+let method = '';
+let link = '';
+let fullLink = '';
 
-    const hash = window.location.hash.substring(1);
+const urlParams = new URLSearchParams(window.location.search);
+    id = urlParams.get('id');
+    method = urlParams.get('method');
+
+    hash = window.location.hash.substring(1);
     console.log('Identifier:', id);
     console.log('Authorisation:', hash);
     console.log('Method of authorisation:', method);
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    
 
     document.getElementById("data").innerHTML = id.concat('-', hash, ' ', method);
 
@@ -23,15 +31,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
         document.getElementById("codeText").classList.add("withCode");
     }
-
     document.getElementById("codeText").innerHTML = hash;
-    const link = new URLSearchParams({
-        id: id,
-        auth: hash,
-        method: method
-    }).toString();
-    const fullLink = `?${link}`;
-    console.log(fullLink);
-    console.log(link)
+    
 });
+link = new URLSearchParams({
+    id: id,
+    auth: hash,
+    method: method
+}).toString();
+fullLink = `/report?${link}`;
+console.log(fullLink);
 
+document.getElementById("report").addEventListener("click", function() {
+    window.location.href = fullLink;
+});

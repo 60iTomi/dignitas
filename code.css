@@ -27,8 +27,7 @@ body {
     color: var(--secondary-color);
     max-width: 40vh;
     padding: 2vh;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin: 2vh;
     border-radius: 1vh;
     position: relative;
     display: flex;
