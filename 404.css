@@ -23,6 +23,7 @@ body {
     margin: 0;
     padding: 3vh;
     color: var(--main-color);
+    max-width: 60vh;
 }
 
 .content h2 {
