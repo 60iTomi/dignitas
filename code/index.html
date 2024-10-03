@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html></html>
+  <head>
+    <title>Code</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta lang="hu">
+    <link rel="stylesheet" href="/fonts.css">
+    <link rel="stylesheet" href="/code.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+  </head>
+  <body>
+    <div class="logoHolder"><img src="/assets/dignitas-logo-allwhite.svg" class="logo" onclick="window.location.href='/'"></div>
+    <div class="ticket">
+        <div class="ticketHeader">
+            <h1>KFC, Váci utca</h1>
+            <h2>A belépéshez az alábbi kódra lesz szükséged:</h2>
+        </div>
+        <div class="codeHolder">
+          <canvas id="barcode"></canvas>
+          <p id="codeText"></p>
+        </div>
+        <div class="ticketBottom">
+            <button id="report">Nem működik?</button>
+            <p id="data"></p>
+        </div>
+    </div>
+    <script src="/autofiller.js"></script>
+  </body>
