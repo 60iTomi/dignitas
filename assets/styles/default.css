@@ -18,7 +18,8 @@ html, body {
 .logo {
     width: 20vh;
     height: auto;
-    display: inline
+    display: inline;
+    margin-right: 3vh;
 }
 
 .header {
@@ -31,7 +32,7 @@ html, body {
 #menuOpen {
     display: inline;
     color: var(--secondary-color);
-    margin-right: 4vh;
+    margin-left: 4vh;
     font-size: 6vh;
     pointer-events: auto !important;
 }
@@ -130,6 +131,12 @@ html, body {
     transition-duration: 0.5s;
     display: flex;
     padding-top: 5vh;
+}
+
+@media screen and (min-width: 70vh) {
+    .menu {
+        width: 70vw;
+    }
 }
 
 .menu #menuExit {
