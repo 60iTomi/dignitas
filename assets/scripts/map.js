@@ -9,14 +9,14 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 var myIcon = L.icon({
-    iconUrl: "/assets/pin.svg",
+    iconUrl: "/assets/vectors/pin.svg",
     iconSize: [28.239,33.333],
     iconAnchor: [14.119, 33.333],
     popupAnchor: [0, -40],
-    shadowUrl: '/assets/pin-shadow.svg',
+    shadowUrl: '/assets/vectors/pin-shadow.svg',
     shadowSize: [40.2,46.4],
     shadowAnchor: [20.1, 38]
 });
 
 var marker = L.marker([47.4932055, 19.0527219], {icon: myIcon}).addTo(map);
-marker.bindPopup("<b>KFC, Váci utca</b><br>I am a popup.");
+marker.bindPopup("<b>KFC, Váci utca</b><br>It's a KFC, what else do you need to know?<br><button>Tovább a belépéshez</button>").openPopup();

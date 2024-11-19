@@ -56,7 +56,8 @@
 }
 
 #menuOpen {
-    margin-right: 0;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
     margin-top: -1px;
     font-size: 21px;
     font-weight: bold;
@@ -108,4 +109,22 @@
 
 .leaflet-control-attribution.leaflet-control * {
     color: var(--main-color);
+}
+
+.leaflet-popup-content button {
+    background-color: var(--tertiary-color);
+    color: var(--main-color);
+    font-family: "Space Mono", serif;
+    font-size: 1.7vh;
+    font-weight: 600;
+    padding: 0.5vh 1vh;
+    border: none;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    margin-top: 2vh;
+}
+
+.leaflet-popup-content button:hover {
+    filter: brightness(1.2);
 }

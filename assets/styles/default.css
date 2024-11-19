@@ -20,6 +20,7 @@ html, body {
     height: auto;
     display: inline;
     margin-right: 3vh;
+    cursor: pointer;
 }
 
 .header {
@@ -35,6 +36,7 @@ html, body {
     margin-left: 4vh;
     font-size: 6vh;
     pointer-events: auto !important;
+    cursor: pointer;
 }
 
 #typewriter {
@@ -71,6 +73,7 @@ html, body {
 }
 
 .toMap {
+    cursor: pointer;
     display: block;
     margin-top: 2vh;
     margin-left: auto;
@@ -136,6 +139,7 @@ html, body {
 @media screen and (min-width: 70vh) {
     .menu {
         width: 70vw;
+        max-width: 400px;
     }
 }
 
@@ -143,6 +147,7 @@ html, body {
     font-size: 5vh;
     margin-top: 0;
     margin-right: 2.5vh;
+    cursor: pointer;
 }
 
 .menu .menuHeader {
@@ -191,6 +196,19 @@ html, body {
 .menu.menuClosed {
     transition-duration: 0.5s;
     transform: translateX(-100%);
+}
+
+#menuFilter {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: opacity(0.5);
+    position: fixed;
+    display: none;
+}
+
+#menuFilter.filterOpened {
+    display: block;
 }
 
 .content.info {
