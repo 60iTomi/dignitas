@@ -3,6 +3,6 @@
   "version": "0.0.1",
   "type": "module",
   "dependencies": {
-    "appwrite": "^16.0.2"
+    "node-appwrite": "^14.1.0"
   }
 }
