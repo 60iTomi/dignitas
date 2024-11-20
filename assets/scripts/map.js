@@ -18,5 +18,18 @@ var myIcon = L.icon({
     shadowAnchor: [20.1, 38]
 });
 
-var marker = L.marker([47.4932055, 19.0527219], {icon: myIcon}).addTo(map);
-marker.bindPopup("<b>KFC, Váci utca</b><br>It's a KFC, what else do you need to know?<br><button>Tovább a belépéshez</button>").openPopup();
+
+var markers = L.markerClusterGroup({
+    showCoverageOnHover: true,
+    spiderfyOnMaxZoom: true,
+    removeOutsideVisibleBounds: true,
+});
+
+markers.addLayer(L.marker([47.4932055, 19.0527219], {icon: myIcon}).addTo(map).bindPopup("<b>KFC, Váci utca</b><br>It's a KFC, what else do you need to know?<br><button>Tovább a belépéshez</button>"));
+markers.addLayer(L.marker([47.506497974, 19.054499782], {icon: myIcon}).addTo(map).bindPopup("<b>Budapest-Nyugati</b><br>Railway-station.<br><button>Tovább a belépéshez</button>"));
+
+function addRestroom(lat, long, name, desc, id) {
+    markers.addLayer(L.marker([lat, long], {icon: myIcon}).addTo(map).bindPopup("<b>"+name+"</b><br>"+desc+"<br><button>Tovább a belépéshez</button>"));
+}
+
+map.addLayer(markers);

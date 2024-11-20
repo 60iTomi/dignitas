@@ -1,28 +1,24 @@
-let id = '';
-let hash = '';
-let method = '';
-let link = '';
-let fullLink = '';
+let method = 'code128';
+let auth = '12345';
+let id = 'notFound';
+const name = 'Test';
 
 const urlParams = new URLSearchParams(window.location.search);
-    id = urlParams.get('id');
-    method = urlParams.get('method');
-
-    hash = window.location.hash.substring(1);
+    if (urlParams.has('id')) {
+        id = urlParams.get('id');
+    }
     console.log('Identifier:', id);
-    console.log('Authorisation:', hash);
-    console.log('Method of authorisation:', method);
+
 
 document.addEventListener('DOMContentLoaded', (event) => {
     
 
-    document.getElementById("data").innerHTML = id.concat('-', hash, ' ', method);
-
     if (method == 'text') {
         document.getElementById("codeText").classList.add("textOnly");
         document.getElementById("barcode").style.display = "none";
+        console.log("Entry is text only");
     } else {
-        JsBarcode("#barcode", hash, {
+        JsBarcode("#barcode", auth, {
             format: method,
             lineColor: "black",
             height:80,
@@ -30,13 +26,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
             displayValue: false
         });
         document.getElementById("codeText").classList.add("withCode");
+        console.log("Entry is with barcode");
     }
-    document.getElementById("codeText").innerHTML = hash;
+    document.getElementById("codeText").innerHTML = auth;
+    document.getElementById("establishmentName").innerHTML = name;
+    document.getElementById("reference").innerHTML = id.concat('-', auth, ' ', method);
     
 });
+
+
+
 link = new URLSearchParams({
     id: id,
-    auth: hash,
+    auth: auth,
     method: method
 }).toString();
 fullLink = `/report?${link}`;

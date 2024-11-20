@@ -1,0 +1,8 @@
+{
+  "name": "dignitas",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "appwrite": "^16.0.2"
+  }
+}
