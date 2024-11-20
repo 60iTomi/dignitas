@@ -4,10 +4,10 @@
     <title>DIGNITAS</title>
     <meta charset="utf-8" lang="hu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/gradient.png">
-    <link rel="stylesheet" type="text/css" href="/fonts.css">
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <script src="/typewriter.js"></script>
+    <link rel="icon" href="/assets/favicons/gradient.png">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/default.css">
+    <script src="/assets/scripts/typewriter.js"></script>
     
 </head>
 <body>
@@ -24,9 +24,11 @@
             <a class="menuItem" href="/oss">Open Source Software</a>
         </div>
     </div>
+    <div id="menuFilter"></div>
     <div class="header">
-        <img src="/dignitas-logo-light.svg" class="logo" onclick="window.location.href='/'">
         <span class="material-symbols-outlined" id="menuOpen">menu</span>
+        <img src="assets/vectors/dignitas-logo-light.svg" class="logo" onclick="window.location.href='/'">
+        
     </div>
     <div class="content">
         <div class="typewriterContainer"><h1 id="typewriter">Méltósággal, közösen.</h1></div>
@@ -34,7 +36,7 @@
     </div>
     <div class="content stats">
         <div class="stat">
-            <h2>211</h2>
+            <h2>{toiletsNumber}</h2>
             <p>elérhető WC</p>
         </div>
         <div class="stat">
@@ -55,6 +57,6 @@
     <div class="footer">
         <p>© 2024 DIGNITAS</p>
     </div>
-<script src="/main.js"></script>
+<script src="/assets/scripts/main.js"></script>
 </body>
 </html>
