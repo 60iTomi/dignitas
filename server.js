@@ -1,11 +1,15 @@
 import { createServer } from 'node:http';
-import { Databases, Client } from'node-appwrite';
+import { Databases, Client } from 'node-appwrite';
+import dotenv from 'dotenv';
 
+dotenv.config(); // Add this line to load environment variables
+
+let key = process.env.thomasDev;
 
 const client = new Client()
     .setEndpoint("https://cloud.appwrite.io/v1")
     .setProject("670145c3000f4c561037")
-    .setKey("NOTTELLINYOULOL")
+    .setKey(key)
 
 const databases = new Databases(client);
 
@@ -22,4 +26,3 @@ promise.then(function (response) {
   }, function (error) {
     console.log(error);
 });
-
