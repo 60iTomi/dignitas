@@ -2,9 +2,15 @@
   "name": "dignitas",
   "version": "0.0.1",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/60iTomi/dignitas.git"},
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "node-appwrite": "^14.1.0"
-  }
+  },
+  "scripts": {
+  "start": "node server.js"
+}
 }
