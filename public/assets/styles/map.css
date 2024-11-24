@@ -111,6 +111,11 @@
     color: var(--main-color);
 }
 
+.leaflet-popup-content p {
+    margin-top: 0.3vh !important;
+    margin-bottom: 0.1vh !important;
+}
+
 .leaflet-popup-content button {
     background-color: var(--tertiary-color);
     color: var(--main-color);

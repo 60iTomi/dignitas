@@ -9,7 +9,7 @@ body {
 
 .ticket .ticketHeader h1 {
     font-family: "Space Mono", monospace;
-    font-size: 4vh;
+    font-size: 3.2vh;
     font-weight: 600;
     margin: 0;
 }
@@ -45,15 +45,22 @@ body {
     height: 4vh;
     justify-content: space-between;
     align-items: center;
+    margin-top: 2vh;
 }
 
-.ticket .ticketBottom p {
+.ticket .ticketBottom .references p {
     font-family: "Space Mono", serif;
     font-style: italic;
     font-size: 1.3vh;
     color: var(--tertiary-color);
     font-weight: 500;
     margin: 0;
+}
+
+.ticket .ticketBottom .references {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vh;
 }
 
 .ticket .ticketBottom button {
